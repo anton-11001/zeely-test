@@ -2,7 +2,7 @@ import type { BackgroundThumbnailProps } from '../types';
 
 export function PendingThumbnail({ background }: BackgroundThumbnailProps) {
   return (
-    <div className="flex h-full flex-col items-center justify-center gap-2 bg-black/90 p-4">
+    <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-black/90 p-4">
       <div className="relative h-14 w-14">
         <svg className="h-14 w-14 -rotate-90" viewBox="0 0 36 36" aria-hidden>
           <circle

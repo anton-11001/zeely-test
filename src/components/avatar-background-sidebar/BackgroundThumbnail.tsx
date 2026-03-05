@@ -6,6 +6,7 @@ import {
   GeneratedThumbnail,
   DefaultThumbnail,
 } from './thumbnail-variants';
+import { THUMBNAIL_HEIGHT, THUMBNAIL_RADIUS, THUMBNAIL_WIDTH } from './constants';
 
 const BACKGROUND_TYPES = {
   PENDING: 'PENDING',
@@ -47,9 +48,14 @@ export function BackgroundThumbnail(props: BackgroundThumbnailProps) {
   return (
     <div
       className={cn(
-        'relative aspect-[2/4] overflow-hidden rounded-2xl border bg-muted',
+        'relative shrink-0 overflow-hidden border bg-muted',
         !isPending && 'cursor-pointer transition-opacity hover:opacity-90'
       )}
+      style={{
+        width: THUMBNAIL_WIDTH,
+        height: THUMBNAIL_HEIGHT,
+        borderRadius: THUMBNAIL_RADIUS,
+      }}
     >
       <ThumbnailComponent {...props} />
     </div>

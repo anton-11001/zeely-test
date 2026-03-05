@@ -17,6 +17,7 @@ import {
   GENERATION_TIME_MS,
   GENERATION_UPDATE_INTERVAL_MS,
   EMPTY_BACKGROUND_IDEA_ERROR,
+  THUMBNAIL_WIDTH,
 } from './constants';
 import { formatEstimatedTimeLeft } from '@/utils/time-utils';
 import type { AvatarBackgroundSidebarProps } from './types';
@@ -145,7 +146,12 @@ export function AvatarBackgroundSidebar({
             <h3 className="text-sm font-semibold text-foreground">
               Your backgrounds
             </h3>
-            <div className="grid grid-cols-3 gap-3">
+            <div
+              className="grid gap-2"
+              style={{
+                gridTemplateColumns: `repeat(3, ${THUMBNAIL_WIDTH}px)`,
+              }}
+            >
               {backgrounds.map(background => (
                 <BackgroundThumbnail
                   key={background.id}

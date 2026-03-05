@@ -20,6 +20,10 @@ export const GENERATION_UPDATE_INTERVAL_MS = 300;
 
 export const EMPTY_BACKGROUND_IDEA_ERROR = '  Please write an idea..';
 
+export const THUMBNAIL_WIDTH = 112;
+export const THUMBNAIL_HEIGHT = 198;
+export const THUMBNAIL_RADIUS = 16;
+
 export const DEFAULT_BACKGROUND: BackgroundItem = {
   id: 'default',
   type: 'default',

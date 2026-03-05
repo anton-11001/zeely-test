@@ -7,23 +7,25 @@ export function GeneratedThumbnail({
 }: BackgroundThumbnailProps) {
   const imageUrl = background.imageUrl!;
   return (
-    <div className="relative h-full w-full">
+    <div className="relative size-full">
       <img
         src={imageUrl}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 size-full object-cover object-center"
         aria-hidden
       />
       <img
         src={avatarImageUrl}
         alt={`${avatarName} background`}
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className="absolute inset-0 size-full object-cover object-center"
         style={
           {
             maskImage: `url(${avatarImageUrl})`,
             WebkitMaskImage: `url(${avatarImageUrl})`,
-            maskSize: 'cover',
-            WebkitMaskSize: 'cover',
+            maskSize: 'contain',
+            WebkitMaskSize: 'contain',
+            maskRepeat: 'no-repeat',
+            WebkitMaskRepeat: 'no-repeat',
             maskPosition: 'center',
             WebkitMaskPosition: 'center',
           } as React.CSSProperties
