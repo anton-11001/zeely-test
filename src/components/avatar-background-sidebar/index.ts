@@ -1,0 +1,1 @@
+export { AvatarBackgroundSidebar } from "./AvatarBackgroundSidebar";
