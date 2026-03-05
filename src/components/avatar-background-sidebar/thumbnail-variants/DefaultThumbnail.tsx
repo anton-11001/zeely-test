@@ -14,7 +14,7 @@ export function DefaultThumbnail({
         />
       )}
       {background.type === 'default' && (
-        <span className="absolute left-2 top-2 rounded bg-muted/95 px-2 py-0.5 text-xs font-medium text-foreground">
+        <span className="absolute left-2 top-2 rounded bg-muted/95 px-[4px] py-[6px] text-[10px] font-bold text-foreground leading-none">
           DEFAULT
         </span>
       )}
